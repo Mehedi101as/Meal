@@ -5,8 +5,7 @@
  * @description এই স্ক্রিপ্টটি Google Sheets থেকে CSV ডেটা পড়ে বিভিন্ন ট্যাবে টেবিল আকারে প্রদর্শন করে
  */
 
-const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqrXoiSJndnVDYSBuQTrtI3rDYlzDACY1Prad6FkE5p8ytGCGDNnmxRg3H3A9aYg/pub?gid=646586436&single=true&output=csv";
-
+const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRSzXzTiIMbNPQtldQzyg4NfLJ9jfNj0FyAq8DbjrM3vbhdFn2I3y1kVKKZOH7Hbw/pub?gid=646586436&single=true&output=csv"
 // ================== ট্যাব ফাংশনালিটি =================
 /**
  * ট্যাব ইন্টারফেস ইনিশিয়ালাইজেশন
