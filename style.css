@@ -1,0 +1,348 @@
+/* ===== CSS RESET & BASE STYLES ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'SolaimanLipi', sans-serif;
+}
+
+:root {
+    /* Color Palette */
+    --primary-blue: #1e3c72;
+    --secondary-blue: #2a5298;
+    --accent-blue: #2563eb;
+    --light-blue: #3b82f6;
+    --success-green: #34d399;
+    --error-red: #f87171;
+    --neutral-blue: #60a5fa;
+    --background: #f5f7fa;
+    --surface: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #6c757d;
+    --border: #dee2e6;
+    --hover: #e9ecef;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 10px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== HEADER STYLES ===== */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ===== TAB STYLES ===== */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: var(--surface);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+.tab-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--hover);
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 150px;
+    font-weight: 600;
+}
+
+.tab-btn:hover {
+    background-color: var(--border);
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, var(--accent-blue), var(--light-blue));
+    color: white;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ===== SECTION STYLES ===== */
+.section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px var(--shadow);
+    margin-bottom: 20px;
+}
+
+.section.show {
+    display: block;
+    opacity: 1;
+}
+
+.section-header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+    color: var(--primary-blue);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ===== TABLE STYLES ===== */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+}
+
+th,
+td {
+    border: 1px solid var(--border);
+    padding: 10px 8px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--primary-blue);
+    color: white;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+#table4 tr th,
+#table7 tr th,
+#table8 tr th,
+#table9 tr th {
+    border: 2px solid var(--border)
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: var(--hover);
+}
+
+/* ===== LAYOUT STYLES ===== */
+.flex {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.flex>* {
+    flex: 1;
+    min-width: 300px;
+}
+
+.col {
+    display: flex;
+    justify-content: space-between;
+}
+
+.color {
+    display: flex;
+    font-size: 18px;
+    gap: 30px;
+}
+
+/* ===== LOADING STYLES ===== */
+.loading {
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.loading i {
+    margin-right: 10px;
+    color: var(--accent-blue);
+}
+
+/* ===== COLOR CLASSES ===== */
+.positive {
+    color: var(--success-green);
+    font-weight: bold;
+}
+
+.negative {
+    color: var(--error-red);
+    font-weight: bold;
+}
+
+.neutral {
+    color: var(--neutral-blue);
+    font-weight: bold;
+}
+
+/* ====== প্রথম row (first-child) ====== */
+#table1 tbody tr:first-child,
+#table2 tbody tr:first-child,
+#table3 tbody tr:first-child,
+#table2 tbody tr:nth-child(3),
+#table3 tbody tr:nth-child(2),
+
+
+/* ====== শেষ row (last-child) ====== */
+#table4 tbody tr:last-child,
+#table6 tbody tr:last-child,
+#table7 tbody tr:last-child,
+#table8 tbody tr:last-child,
+#table9 tbody tr:last-child,
+
+/* ====== নির্দিষ্ট columns ====== */
+/* table4 columns */
+#table4 tbody td:nth-child(2),
+#table4 tbody td:nth-child(3),
+#table4 tbody td:last-child,
+
+/* table5 columns */
+#table5 tbody td:nth-child(2),
+#table5 tbody td:nth-child(5),
+#table5 tbody td:nth-child(6),
+#table5 tbody td:last-child,
+
+/* table6 columns */
+#table6 tbody td:nth-child(2),
+#table6 tbody td:nth-child(3),
+#table6 tbody td:nth-child(8),
+#table6 tbody td:nth-child(9),
+#table6 tbody td:last-child {
+    font-weight: bold;
+}
+
+#table2 tbody tr:nth-child(4) td:nth-child(1) {
+    font-weight: bolder;
+    font-size: 41px;
+    background-color: #e9ecef;
+}
+
+#table3 tbody tr:nth-child(3) {
+    font-weight: bolder;
+}
+
+/* Sticky left columns 1,2,3 */
+#table4 tr:not(:last-child) td:nth-child(-n+3),
+#table4 tr:last-child td:first-child,
+#table4 tr:nth-child(2) th:nth-child(-n+3) {
+    position: sticky;
+    z-index: 2;
+}
+
+/* Sticky left columns */
+#table4 td:nth-child(1),
+#table4 th:nth-child(1) {
+    left: 0;
+}
+
+#table4 tr:not(:last-child) td:nth-child(2),
+#table4 tr:nth-child(2) th:nth-child(2) {
+    left: 53px;
+    min-width: 104px;
+}
+
+#table4 td:nth-child(3),
+#table4 th:nth-child(3) {
+    left: 155px;
+}
+
+/* Sticky right column 35 */
+#table4 td:last-child,
+/* #table4 tr:last-child td:nth-child(33), */
+#table4 tr:nth-child(2) th:last-child {
+    position: sticky;
+    right: 0;
+    z-index: 2;
+}
+
+/* Alternating row colors */
+#table4 tr:nth-child(even) td:nth-child(-n+3),
+#table4 tr:nth-child(even) td:last-child {
+    background-color: #f8f9fa;
+}
+
+#table4 tr:nth-child(odd):not(:last-child) td:nth-child(-n+3),
+#table4 tr:nth-child(odd) td:last-child {
+    background-color: #fff;
+}
+
+
+/* Sticky header */
+#table4 tr:nth-child(2) th:nth-child(-n+3),
+#table4 tr:nth-child(2) th:nth-child(5) {
+    background-color: var(--primary-blue);
+}
+
+#table4 tr:not(:last-child) td:nth-child(2) {
+    text-align: start;
+}
+
+#table4 tr:last-child td,
+#table4 tr:last-child td:last-child,
+#table6 tr:last-child td,
+#table7 tr:last-child td,
+#table8 tr:last-child td,
+#table9 tr:last-child td {
+    background-color: #e9ecef;
+    border-top: 3px solid #1e3c72;
+}
+
+#table4 tr:not(:last-child) td:last-child,
+#table4 tr:last-child td:first-child {
+    background-color: #e9ecef;
+}
+
+/* Hover effect all rows (including last) */
+#table4 tr:hover td,
+#table4 tr:nth-child(odd):hover td:nth-child(-n+3),
+#table4 tr:nth-child(even):hover td,
+#table4 tr:hover td:last-child {
+    background-color: #ccd0d3;
+    z-index: 3;
+}
+
+
+
